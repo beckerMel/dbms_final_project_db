@@ -22,7 +22,7 @@ CREATE TABLE users (
 CREATE TABLE user_follows_user (
 	follower_id INT,
     followed_id INT,
-    PRIMARY KEY(viewer_id, critic_id),
+    PRIMARY KEY(follower_id, followed_id),
     CONSTRAINT FOREIGN KEY follower_fk (follower_id) REFERENCES 
 		users (user_id) ON UPDATE RESTRICT
 						ON DELETE CASCADE,
